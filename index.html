@@ -14,13 +14,25 @@
         <header>
             <h1>Elizabeth Batz</h1>
             <h3>About Me</h3>
+            <nav>
+                <a id="load-projects-link" href="projects.html"
+                    onclick="document.getElementById('repo-list').style.display='block'; if (typeof loadProjects === 'function') loadProjects('repo-list'); return false;">View
+                    Projects</a>
+            </nav>
         </header>
         <p>I am a 32 year old junior developer, pursuing a degree in Computer Science. Currently, I am at Jefferson
             Community and Technical college, completing my Associates in Applied Science. In January, I will be
             attending the University of Lousville, to complete my Bachelors of Art Computer Science. <br>
             I live in Louisville, Kentucky with my wonderful fiancee and our 3 cats. I am passionate about learning,
             photography, my small family, and most of all programming.</p>
+        <section id="projects-container">
+            <h2>My GitHub Projects</h2>
+            <div id="repo-list" style="display:none;">
+                <p>Loading projects...</p>
+            </div>
+        </section>
     </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

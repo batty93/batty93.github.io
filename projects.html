@@ -19,29 +19,20 @@
 
         <section>
             <h2>Projects</h2>
-            <div>
-                <h3>Argentina Travel Guide - Personal Project</h3>
-                <p>
-                    A **full-stack web application** developed using HTML, CSS, and JavaScript. Implemented a back-end
-                    server using **Node.js** to manage application logic. Designed a modern, responsive user interface,
-                    including a dynamic image carousel using **CSS Flexbox**.
-                </p>
-            </div>
-            <div>
-                <h3>The Quote Card Express</h3>
-                <p>
-                    An ongoing project in which I am learing to use JavaScript to create servers with **Node.js** and
-                    **Express.js**.
-                </p>
-            </div>
-            <div>
-                <h3>Currency Exchange</h3>
-                <p>
-                    This simple currency exchnage was written in PHP to practice some of the skills that I had learned.
-                </p>
+
+            <div id="repo-list">
+                <p>Loading projects...</p>
             </div>
         </section>
     </main>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof loadProjects === 'function') {
+                loadProjects('repo-list');
+            }
+        });
+    </script>
 </body>
 
 </html>

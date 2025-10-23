@@ -1,95 +1,138 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
     background-color: #f4f4f4;
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
 }
 
-h1,
-h2 {
-    color: #007bff;
-}
-
-header {
+header h1,
+header h3,
+#projects-container h2 {
+    color: #0056b3;
     text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-    margin: 10px 0 5px 0;
+header nav {
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
-header p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-header a {
-    color: #007bff;
+#load-projects-link {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    background-color: #007bff;
+    color: #ffffff;
     text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
 }
 
-nav {
-    margin-top: 10px;
-    padding-top: 5px;
+#load-projects-link:hover,
+#load-projects-link:focus {
+    background-color: #0056b3;
+    color: #fff;
 }
 
-nav a {
-    margin: 0 10px;
-    font-weight: bold;
+.project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Sections */
-section {
-    margin: 20px 0;
+.project-card {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    background: #fafafa;
 }
 
-section h2 {
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-}
-
-section>div {
-    margin-bottom: 15px;
-    padding-left: 5px;
-}
-
-section>div h3 {
-    margin: 0;
+.project-card h3 {
+    margin: 0 0 6px 0;
     font-size: 18px;
-    color: #555;
 }
 
-section>div p {
-    margin: 5px 0;
-    font-size: 14px;
+.project-card p {
+    margin: 0 0 8px 0;
+    color: #444;
 }
 
-section ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 5px;
-    font-size: 14px;
+.repo-details {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    color: #666;
 }
 
-section ul li {
-    margin-bottom: 3px;
+.error {
+    color: #a94442;
+    background: #f2dede;
+    padding: 8px;
+    border-radius: 4px;
 }
 
-section:nth-child(5)>div p {
-    margin: 5px 0;
-    padding: 2px 0;
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .repo-details {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+.project-card h3 a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.repo-details {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.language {
+    background-color: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+#repo-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+
+    #repo-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    #repo-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
